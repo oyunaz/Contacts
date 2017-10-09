@@ -16,7 +16,7 @@
                 <items>
                 <MenuItem text="Add" onAction="#showAddContactDialog"/>
                     <SeparatorMenuItem/>
-                <MenuItem text="Delete"/>
+                <MenuItem text="Delete" onAction="#deleteContact"/>
                     <SeparatorMenuItem/>
                 <MenuItem text="Edit" onAction="#showEditContactDialog"/>
                 </items>
@@ -25,6 +25,9 @@
     </top>
     <center>
         <TableView fx:id="contactsTable">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
             <columns>
                 <TableColumn text="First Name">
                     <cellValueFactory>
